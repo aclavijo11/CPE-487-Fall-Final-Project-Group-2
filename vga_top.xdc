@@ -4,7 +4,7 @@ create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {cl
 
 # Reset signal
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports rst]
-
+ 
 # VGA signals
 
 set_property -dict { PACKAGE_PIN B11   IOSTANDARD LVCMOS33 } [get_ports { vga_hsync }]; #IO_L4P_T0_15 Sch=vga_hs
