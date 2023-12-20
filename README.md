@@ -32,4 +32,4 @@ To ensure the balls existed in different locations
 Some problems along the way
 *Multiple Driver Error for red/green/blue_out. To fix this issue, we expanded the bit size for red/green/blue_in instead of calling red_in for each ball instantiation.
 
-   
+[Video Link that accomplished the above]([url](https://youtu.be/Kbr0ko_FnX0)https://youtu.be/Kbr0ko_FnX0)
