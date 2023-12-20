@@ -2,12 +2,12 @@
 This repository showcases the Final Project for group 2. 
 An imitation of the Windows lock screen's iconic bubble animation.
 
-In this project, the team created an imitation of teh Window lock screen's [iconic bubble animation]([url](https://www.youtube.com/watch?v=Vo19qTt9rlE&themeRefresh=1)). Due to time and skill limitation, we focused on 2 key components:
+In this project, the team created an imitation of teh Window lock screen's [iconic bubble animation]([https://www.youtube.com/watch?v=Vo19qTt9rlE&themeRefresh=1](https://www.youtube.com/watch?v=Vo19qTt9rlE&themeRefresh=1)):  Due to time and skill limitation, we focused on 2 key components:
 
 * Multiple balls
 * Ball Collision with each other
 
-The team built off of [Lab 3: Bouncing Ball]([url](https://github.com/byett/dsd/tree/CPE487-Fall2023/Nexys-A7/Lab%203)https://github.com/byett/dsd/tree/CPE487-Fall2023/Nexys-A7/Lab%203). 
+The team built off of [Lab 3: Bouncing Ball]([https://www.youtube.com/watch?v=Vo19qTt9rlE](https://github.com/byett/dsd/tree/CPE487-Fall2023/Nexys-A7/Lab%203)https://github.com/byett/dsd/tree/CPE487-Fall2023/Nexys-A7/Lab%203). 
 
 To get multiple balls displayed on the screen: 
  The following files were modified: 
@@ -136,4 +136,4 @@ To ensure the balls existed in different locations
 Some problems along the way
 *Multiple Driver Error for red/green/blue_out. To fix this issue, we expanded the bit size for red/green/blue_in instead of calling red_in for each ball instantiation.
 
-Video Link for the work above: https://youtu.be/Kbr0ko_FnX0
+[Video Link for the work above:](https://youtu.be/Kbr0ko_FnX0)
