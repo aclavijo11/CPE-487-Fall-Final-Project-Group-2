@@ -166,7 +166,6 @@ BEGIN
         );
         
 
-
     vga_vsync <= S_vsync; --connect output vsync
 
     clk_wiz_0_inst : clk_wiz_0
