@@ -38,3 +38,7 @@ This repository showcases the Final Project for group 2.
 An imitation of the Windows lock screen's iconic bubble animation.
 
 [Video Link for the work above:](https://youtu.be/Kbr0ko_FnX0)
+
+We then modified the shape and color of the ball. These modifications were similar to what was achieved in lab3.
+
+[Update Video](https://youtu.be/gdp5zqRE4GQ)
