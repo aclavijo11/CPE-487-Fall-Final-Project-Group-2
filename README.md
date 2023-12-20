@@ -6,3 +6,7 @@ In this project, the team created an imitation of teh Window lock screen's [icon
 
 * Multiple balls
 * Ball Collision with each other
+
+The team built off of [Lab 3: Bouncing Ball]([url](https://github.com/byett/dsd/tree/CPE487-Fall2023/Nexys-A7/Lab%203)https://github.com/byett/dsd/tree/CPE487-Fall2023/Nexys-A7/Lab%203). 
+
+To get multiple balls displayed on the screen: 
