@@ -43,7 +43,7 @@ We then modified the shape and color of the ball. These modifications were simil
 
 [Update Video](https://youtu.be/gdp5zqRE4GQ)
 
-## Approaches for achieving ball collision
+## Approaches for Achieving Ball Collision
 1. Our first approach consisted of editing the ball.vhd module to include the positions of all the balls, as passed from vga_top.vhd, and make a series of conditional statements to change each ball's direction of motion once one of its pixels had the same position as another ball's pixel. A sample code from this approach can be seen below.
 
 ![image](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/assets/98104592/a409feec-0e45-473a-b597-b8939bc7b137)
@@ -81,7 +81,7 @@ We then modified the shape and color of the ball. These modifications were simil
   * Click 'Open Hardware Manager' and click 'Open Target' then 'Auto Connect'
   * Click 'Program Device' then xc7a100t_0 to download vga_top.bit to the Nexys A7 board
  
-**Project Process Summary:**
+## Project Process Summary:
 
 * All tasks and goals were vided amongst the team, i.e. no group member had a specific task.
 * The team met during 3 lab sections and 3 other meetings outside of scheduled lab time.
