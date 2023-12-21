@@ -72,7 +72,8 @@ We then modified the shape and color of the ball. These modifications were simil
   * Create a new constraint file of file type XDC called vga_top
   * Choose Nexys A7-100T board for the project
   * Click 'Finish'
-  * Click design sources and copy the VHDL code from clk_wiz_0.vhd, clk_wiz_0_clk_wiz.vhd, vga_sync.vhd, ball.vhd, and vga_top.vhd
+  * Click design sources and copy the VHDL code from clk_wiz_0.vhd, clk_wiz_0_clk_wiz.vhd, vga_sync.vhd, ball.vhd, and vga_top.vhd as found in [CPE-487-Fall-Final-Project-Group-2](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2.git)
+
 
 2. Click constraints and copy the code from vga_top.xdc found in [CPE-487-Fall-Final-Project-Group-2](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2.git)
 
