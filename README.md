@@ -43,7 +43,15 @@ We then modified the shape and color of the ball. These modifications were simil
 
 [Update Video](https://youtu.be/gdp5zqRE4GQ)
 
-Project Process Summary:
+##**Approaches for achieving ball collision**
+1. Our first approach consisted of editing the ball.vhd module to include the positions of all the balls, as passed from vga_top.vhd, and make a series of conditional statements to change each ball's direction of motion once one of its pixels had the same position as another ball's pixel. A sample code from this approach can be seen below.
+
+![image](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/assets/98104592/a409feec-0e45-473a-b597-b8939bc7b137)
+
+2. Our second approach was to make the collision detection happen in vga_top.vhd and then update the variables for ball_x_motion and ball_y_motion within vga_top.vhd and pass them to ball.vhd. However, this approach yielded strange behavior where only one ball appeared bouncing at the bottom of the screen, as seen in this [video](Strange Behavior.mp4).
+
+
+**Project Process Summary:**
 
 * All tasks and goals were vided amongst the team, i.e. no group member had a specific task.
 * The team met during 3 lab sections and 3 other meetings outside of scheduled lab time.
