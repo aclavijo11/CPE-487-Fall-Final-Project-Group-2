@@ -61,21 +61,18 @@ We then modified the shape and color of the ball. These modifications were simil
 ![image](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/assets/98104592/874d25fa-1de0-45e8-bd02-aff5cbba25e3)
 
 ## Steps to Test Code Using Vivado and Nexys 7 Board
+
 1. Create a new RTL project Final Project in Vivado Quick Start
- *Create five new source files of file type VHDL called clk_wiz_0, clk_wiz_0_clk_wiz, vga_sync, ball, and vga_top
+  * Create five new source files of file type VHDL called clk_wiz_0, clk_wiz_0_clk_wiz, vga_sync, ball, and vga_top
+  * Create a new constraint file of file type XDC called vga_top
+  * Choose Nexys A7-100T board for the project
+  * Click 'Finish'
+  * Click design sources and copy the VHDL code from clk_wiz_0.vhd, clk_wiz_0_clk_wiz.vhd, vga_sync.vhd, ball.vhd, and vga_top.vhd
 
- *Create a new constraint file of file type XDC called vga_top
-
- *Choose Nexys A7-100T board for the project
-
- *Click 'Finish'
-
- *Click design sources and copy the VHDL code from clk_wiz_0.vhd, clk_wiz_0_clk_wiz.vhd, vga_sync.vhd, ball.vhd, and vga_top.vhd
-
-1. Click constraints and copy the code from vga_top.xdc found in []((https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2.git))
-2. Run synthesis
-3. Run implementation
-4. Generate bitstream, open hardware manager, and program device
+2. Click constraints and copy the code from vga_top.xdc found in [CPE-487-Fall-Final-Project-Group-2]((https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2.git))
+3. Run synthesis
+4. Run implementation
+5. Generate bitstream, open hardware manager, and program device
 
  *Click 'Generate Bitstream
  *Click 'Open Hardware Manager' and click 'Open Target' then 'Auto Connect'
