@@ -43,3 +43,12 @@ An imitation of the Windows lock screen's iconic bubble animation.
 We then modified the shape and color of the ball. These modifications were similar to what was achieved in lab3.
 
 [Update Video](https://youtu.be/gdp5zqRE4GQ)
+
+Project Process Summary:
+
+* All tasks and goals were vided amongst the team, i.e. no group member had a specific task.
+* The team met during 3 lab sections and 3 other meetings outside of scheduled lab time.
+* Accomplishments
+ ** Successfully adding 2 more balls that bounced off the "walls" of the screen.
+* Goals not met
+ ** included not implementing the ball collision algorithm successfully.
