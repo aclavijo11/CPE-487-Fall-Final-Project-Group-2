@@ -49,6 +49,6 @@ Project Process Summary:
 * All tasks and goals were vided amongst the team, i.e. no group member had a specific task.
 * The team met during 3 lab sections and 3 other meetings outside of scheduled lab time.
 * Accomplishments
- ** Successfully adding 2 more balls that bounced off the "walls" of the screen.
+  * Successfully adding 2 more balls that bounced off the "walls" of the screen.
 * Goals not met
- ** included not implementing the ball collision algorithm successfully.
+  * included not implementing the ball collision algorithm successfully.
