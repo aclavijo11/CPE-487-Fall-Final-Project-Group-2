@@ -55,6 +55,7 @@ We then modified the shape and color of the ball. These modifications were simil
 
 3. Similar to our second approach, this approach attempted to implement the ball collision algorithm by creating a vector signal that would track if a ball's pixel location was within 10 pixels of another ball's pixel location, then pass that signal to ball.vhd where the process of making the balls change direction would happen. See below a snippet of the codes found in vga_top.vhd and ball.vhd for this approach.
 
+
 **vga_top.vhd**
 ![image](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/assets/98104592/ba65be1b-808b-4ed5-9416-499a9a45dcb1)
 
