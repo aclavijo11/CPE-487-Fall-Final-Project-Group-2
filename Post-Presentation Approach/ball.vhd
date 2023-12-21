@@ -16,7 +16,8 @@ ENTITY ball IS
 		red       : OUT STD_LOGIC;
 		green     : OUT STD_LOGIC;
         curr_x, curr_y : OUT std_logic_vector(10 DOWNTO 0);
-        collision : IN STD_LOGIC_VECTOR (10 DOWNTO 0);
+        collisionx : IN STD_LOGIC_VECTOR (10 DOWNTO 0);
+        collisiony : IN STD_LOGIC_VECTOR (10 DOWNTO 0);
      
 		blue      : OUT STD_LOGIC
 	);
@@ -65,8 +66,16 @@ BEGIN
         ball_y_motion <= "00000000100"; -- +4 pixels
     END IF;
     
-    ball_y <= ball_y + ball_y_motion + collision; -- compute the next ball position
-    ball_x <= ball_x + ball_x_motion + collision;
+    IF (collisionx = "00000000100" OR collisionx = "11111111100") THEN
+    ball_x <= ball_x + collisionx;
+    
+    ELSIF (collisiony = "00000000100" OR collisiony = "11111111100") THEN
+    ball_y <= ball_y + collisiony; -- compute the next ball position
+    
+    ELSE 
+    ball_y <= ball_y + ball_y_motion; -- compute the next ball position
+    ball_x <= ball_x + ball_x_motion;
+    END IF;
     
     curr_x <= ball_x;
     curr_y <= ball_y;

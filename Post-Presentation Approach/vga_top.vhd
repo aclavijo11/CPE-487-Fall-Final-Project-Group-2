@@ -29,15 +29,18 @@ ARCHITECTURE Behavioral OF vga_top IS
     SIGNAL S_red, S_green, S_blue : std_logic_vector(2 downto 0);
     SIGNAL S_vsync : STD_LOGIC;
     SIGNAL S_pixel_row, S_pixel_col : STD_LOGIC_VECTOR (10 DOWNTO 0);
-    SIGNAL ball1_x  : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(initial_x1, 11);
-    SIGNAL ball1_y  : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(initial_y1, 11);
-    SIGNAL ball2_x  : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(initial_x2, 11);
-    SIGNAL ball2_y  : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(initial_y2, 11);
-    SIGNAL ball3_x  : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(initial_x3, 11);
-    SIGNAL ball3_y  : STD_LOGIC_VECTOR(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(initial_y3, 11);
-    SIGNAL collision1 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
-    SIGNAL collision2 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
-    SIGNAL collision3 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
+    SIGNAL ball1_x  : STD_LOGIC_VECTOR(10 DOWNTO 0);
+    SIGNAL ball1_y  : STD_LOGIC_VECTOR(10 DOWNTO 0);
+    SIGNAL ball2_x  : STD_LOGIC_VECTOR(10 DOWNTO 0);
+    SIGNAL ball2_y  : STD_LOGIC_VECTOR(10 DOWNTO 0);
+    SIGNAL ball3_x  : STD_LOGIC_VECTOR(10 DOWNTO 0);
+    SIGNAL ball3_y  : STD_LOGIC_VECTOR(10 DOWNTO 0);
+    SIGNAL collisionx1 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
+    SIGNAL collisionx2 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
+    SIGNAL collisionx3 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
+    SIGNAL collisiony1 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
+    SIGNAL collisiony2 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
+    SIGNAL collisiony3 : STD_LOGIC_VECTOR(10 DOWNTO 0):= "00000000000";
     CONSTANT size : INTEGER := 20;
     -- current ball motion - initialized to +4 pixels/frame
 
@@ -53,7 +56,8 @@ ARCHITECTURE Behavioral OF vga_top IS
             pixel_row : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
             pixel_col : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
             curr_x, curr_y : OUT std_logic_vector(10 DOWNTO 0);
-            collision : IN STD_LOGIC_VECTOR (10 DOWNTO 0);
+            collisionx : IN STD_LOGIC_VECTOR (10 DOWNTO 0);
+            collisiony : IN STD_LOGIC_VECTOR (10 DOWNTO 0);
             red : OUT STD_LOGIC;
             green : OUT STD_LOGIC;
             blue : OUT STD_LOGIC
@@ -102,7 +106,8 @@ BEGIN
             pixel_col => S_pixel_col,
             curr_x => ball1_x,
             curr_y => ball1_y,
-            collision => collision1,
+            collisionx => collisionx1,
+            collisiony => collisiony1,
             red       => S_red(0),
             green     => S_green(0),
             blue      => S_blue(0)
@@ -119,7 +124,8 @@ BEGIN
             pixel_col => S_pixel_col,
             curr_x => ball2_x,
             curr_y => ball2_y,
-            collision => collision2,
+            collisionx => collisionx2,
+            collisiony => collisiony2,
             red       => S_red(1),
             green     => S_green(1),
             blue      => S_blue(1)
@@ -137,7 +143,8 @@ BEGIN
             pixel_col => S_pixel_col,
             curr_x => ball3_x,
             curr_y => ball3_y,
-            collision => collision3,
+            collisionx => collisionx3,
+            collisiony => collisiony3,
             red       => S_red(2),
             green     => S_green(2),
             blue      => S_blue(2)
@@ -173,21 +180,23 @@ BEGIN
     --WAIT UNTIL rising_edge(S_vsync);
     -- allow for bounce off upon collision between ball 1 and ball 2
     IF (ball1_y - ball2_y <10) THEN -- if ball 1 pixel y is to the left of ball 2
-        collision1 <= "11111111100"; -- ball 1 -4 pixels (goes left)
-        collision2 <= "00000000100"; -- ball 2 +4 pixels (goes right)
-    ELSIF (ball1_x - ball2_x <10)THEN -- if ball 1 pixel x is to the left of ball 2
-        collision1 <= "11111111100"; -- ball 1-4 pixels (goes left)
-        collision2 <= "00000000100"; -- ball 2 +4 pixels (goes right)
-    ELSIF (ball1_x -ball2_x > 10) THEN -- if ball 1 pixel x is to the right of ball 2
-        collision1 <= "00000000100"; -- ball 2 +4 pixels (goes right)
-        collision2 <= "11111111100"; -- ball 2 -4 pixels (goes left)
-    ELSIF (ball1_y - ball2_y >10) THEN -- if ball 1 pixel y is to the right of ball 2
-        collision1 <= "00000000100"; -- ball 1 +4 pixels (goes right)
-        collision2 <= "11111111100"; -- ball 2 -4 pixels (goes left)
+        collisiony1 <= "11111111100"; -- ball 1 -4 pixels (goes left)
+        collisiony2 <= "00000000100"; -- ball 2 +4 pixels (goes right)
+    ELSIF (ball1_x - ball2_x < 10)THEN -- if ball 1 pixel x is to the left of ball 2
+        collisionx1 <= "11111111100"; -- ball 1-4 pixels (goes left)
+        collisionx2 <= "00000000100"; -- ball 2 +4 pixels (goes right)
+    ELSIF (ball2_x - ball1_x < 10) THEN -- if ball 1 pixel x is to the right of ball 2
+        collisionx1 <= "00000000100"; -- ball 2 +4 pixels (goes right)
+        collisionx2 <= "11111111100"; -- ball 2 -4 pixels (goes left)
+    ELSIF (ball2_y - ball1_y < 10) THEN -- if ball 1 pixel y is to the right of ball 2
+        collisiony1 <= "00000000100"; -- ball 1 +4 pixels (goes right)
+        collisiony2 <= "11111111100"; -- ball 2 -4 pixels (goes left)
     --if no collision detection
     ELSE
-    collision1 <= "00000000000";
-    collision2 <= "00000000000";
+    collisionx1 <= "00000000000";
+    collisionx2 <= "00000000000";
+    collisiony1 <= "00000000000";
+    collisiony2 <= "00000000000";
     END IF;
     
     END PROCESS;
