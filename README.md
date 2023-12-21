@@ -15,7 +15,7 @@ To get multiple balls displayed on the screen:
  2. vga_sync.vhd
  3. ball.vhd
 
-To ensure the balls existed in different locations 
+To ensure the balls existed in different locations, the following modifications were implemented: 
 
 **Ball.vhd**
 1. Added Generic variables in ball.vhd that are called in vga_top
@@ -40,7 +40,7 @@ An imitation of the Windows lock screen's iconic bubble animation.
 
 [Video Link for the work above:](https://youtu.be/Kbr0ko_FnX0)
 
-We then modified the shape and color of the ball. These modifications were similar to what was achieved in lab3.
+We then modified the shape and color of the ball. These modifications were similar to what was achieved in lab 3.
 
 [Update Video](https://youtu.be/gdp5zqRE4GQ)
 
