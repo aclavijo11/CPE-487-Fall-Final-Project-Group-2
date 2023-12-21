@@ -1,6 +1,5 @@
 # CPE-487-Fall-Final-Project-Group-2
-This repository showcases the Final Project for group 2. 
-An imitation of the Windows lock screen's iconic bubble animation.
+This repository showcases the Final Project for group 2: An imitation of the Windows lock screen's iconic bubble animation.
 
 In this project, the team created an imitation of the Window lock screen's [bubble animation](https://www.youtube.com/watch?v=Vo19qTt9rlE).  Due to time and skill limitations, we focused on 2 key components:
 
