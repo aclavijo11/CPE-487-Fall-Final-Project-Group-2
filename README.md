@@ -48,7 +48,7 @@ We then modified the shape and color of the ball. These modifications were simil
 
 ![image](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/assets/98104592/a409feec-0e45-473a-b597-b8939bc7b137)
 
-2. Our second approach was to make the collision detection happen in vga_top.vhd and then update the variables for ball_x_motion and ball_y_motion within vga_top.vhd and pass them to ball.vhd. However, this approach yielded strange behavior where only one ball appeared bouncing at the bottom of the screen, as seen in this [video](Strange Behavior.mp4).
+2. Our second approach was to make the collision detection happen in vga_top.vhd and then update the variables for ball_x_motion and ball_y_motion within vga_top.vhd and pass them to ball.vhd. However, this approach yielded strange behavior where only one ball appeared bouncing at the bottom of the screen, as seen in this [video](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/blob/4060baedee6073fe6be1c0d663fc679661c80d33/Strange%20Behavior.mp4).
 
 
 **Project Process Summary:**
