@@ -57,10 +57,12 @@ We then modified the shape and color of the ball. These modifications were simil
 
 
 **vga_top.vhd**
+
 ![image](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/assets/98104592/ba65be1b-808b-4ed5-9416-499a9a45dcb1)
 
 
 **ball.vhd**
+
 ![image](https://github.com/aclavijo11/CPE-487-Fall-Final-Project-Group-2/assets/98104592/874d25fa-1de0-45e8-bd02-aff5cbba25e3)
 
 ## Steps to Test Code Using Vivado and Nexys A7 Board
